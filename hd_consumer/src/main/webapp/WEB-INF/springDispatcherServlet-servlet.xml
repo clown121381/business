@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<!--SpringMVC的配置文件，包含网站跳转逻辑的控制，配置  -->
+	<context:component-scan base-package="com.hd_business" use-default-filters="false">
+		<!--只扫描控制器。  -->
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	
+	<mvc:default-servlet-handler/>
+	<mvc:resources location="/common/js/" mapping="/js/**"></mvc:resources>
+	<mvc:resources location="/common/imgages/" mapping="/imgages/**"></mvc:resources>
+	<mvc:resources location="/common/css/" mapping="/css/**"></mvc:resources>
+	
+	<mvc:annotation-driven>
+	    <mvc:message-converters register-defaults="true">
+	        <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+	            <property name="supportedMediaTypes" value="text/plain;charset=UTF-8" />
+	        </bean>
+	    </mvc:message-converters>
+	</mvc:annotation-driven>
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<mvc:annotation-driven></mvc:annotation-driven>
+
+
+
+</beans>

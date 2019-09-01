@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd
+		http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+	
+	
+	<context:component-scan base-package="com.hd_business"></context:component-scan>
+
+	<dubbo:application name="hd_consumer"></dubbo:application>
+	<dubbo:protocol name="dubbo" port="20880"></dubbo:protocol>
+	<dubbo:registry protocol="zookeeper" address="zookeeper://127.0.0.1:2181"></dubbo:registry>
+<!-- 	<dubbo:monitor address="localhost:8081"></dubbo:monitor> -->
+	<dubbo:monitor protocol="registry"></dubbo:monitor>
+<!--	<dubbo:annotation package="com.hd_business.controller"/> -->
+	<dubbo:reference id="loginService" check="false" interface="com.hd_business.service.LoginService"></dubbo:reference>
+	<dubbo:reference id="sysAuthorityService" check="false" interface="com.hd_business.service.SysAuthorityService"></dubbo:reference>
+	<dubbo:reference id="sysResourcesService" check="false" interface="com.hd_business.service.SysResourcesService"></dubbo:reference>
+	<dubbo:reference id="sysRoleService" check="false" interface="com.hd_business.service.SysRoleService"></dubbo:reference>
+	<dubbo:reference id="sysUserInfoService" check="false" interface="com.hd_business.service.SysUserInfoService"></dubbo:reference>
+</beans>

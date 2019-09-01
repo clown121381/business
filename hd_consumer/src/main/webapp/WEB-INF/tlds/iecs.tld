@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+    <tlib-version>1.1</tlib-version>
+    <jsp-version>1.2</jsp-version>
+    <short-name>security</short-name>
+    <uri>http://com.sinosoft.security/accessControll</uri>
+    <display-name>Pattern-Based security Tag Library</display-name>
+    
+    <!--页面权限-->
+    <tag>
+        <name>permission</name>
+        <tag-class>cn.com.sinosoft.core.tags.ECSSpringSecurityPageTag</tag-class>
+        <body-content>JSP</body-content>
+         <attribute>
+            <name>access</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>desc</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+      </tag>
+      <!--js权限-->
+      <tag>
+        <name>importJSPermission</name>
+        <tag-class>cn.com.sinosoft.core.tags.ECSSpringSecurityScriptTag</tag-class>
+        <body-content>JSP</body-content>
+      </tag>
+      
+      
+      
+       <tag>
+        <name>importJSDataDictConvert</name>
+        <tag-class>cn.com.sinosoft.iecs.system.config.tags.ECSGenerateJSDataDictConvertTag</tag-class>
+        <body-content>JSP</body-content>
+         <attribute>
+            <name>typeCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute> 
+      </tag>	
+      
+      
+      
+      <tag>
+        <name>dataDictCommon</name>
+        <tag-class>cn.com.sinosoft.iecs.system.config.tags.ECSGeneratePageDataDictCommonTag</tag-class>
+        <body-content>JSP</body-content>
+         <attribute>
+            <name>typeCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+         <attribute>
+            <name>type</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>id</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>clazz</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>name</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>style</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>defaultValue</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>pleaseChoose</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>dictCode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+      </tag>
+      
+     
+      
+		
+      
+      
+      
+      
+      				
+	</taglib>

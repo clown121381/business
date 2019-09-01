@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+    <tlib-version>1.1</tlib-version>
+    <jsp-version>1.2</jsp-version>
+    <short-name>dict</short-name>
+    <uri>http://com.sinosoft.security/accessControll</uri>
+    <display-name>Pattern-Based security Tag Library</display-name>
+    
+    <tag>
+        <name>select</name>
+        <tag-class>cn.com.sinosoft.config.tag.DictTag</tag-class>
+        <body-content>JSP</body-content>
+         <attribute>
+            <name>typeCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>id</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>clazz</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>name</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>style</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>defaultValue</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>pleaseChoose</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+      </tag>
+      
+      <!-- 数据字典js翻译 -->
+       <tag>
+        <name>script</name>
+        <tag-class>cn.com.sinosoft.config.tag.DictTagCodeToContent</tag-class>
+        <body-content>JSP</body-content>
+         <attribute>
+            <name>typeCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute> 
+      </tag>	
+      
+      <!--数据字典radio组件  -->
+       <tag>
+        <name>radio</name>
+        <tag-class>cn.com.sinosoft.config.tag.DictTag</tag-class>
+        <body-content>JSP</body-content>
+         <attribute>
+            <name>type</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+         <attribute>
+            <name>typeCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>id</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>clazz</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>name</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>style</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>defaultValue</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+      </tag>
+      
+        <!--数据字典checkbox组件  -->
+       <tag>
+        <name>checkbox</name>
+        <tag-class>cn.com.sinosoft.config.tag.DictTag</tag-class>
+        <body-content>JSP</body-content>
+         <attribute>
+            <name>type</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+         <attribute>
+            <name>typeCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>id</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>clazz</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>name</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>style</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>defaultValue</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>brNumber</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+      </tag>
+      
+		<!--数据字典span组件  -->
+       <tag>
+        <name>span</name>
+        <tag-class>cn.com.sinosoft.config.tag.DictTag</tag-class>
+        <body-content>JSP</body-content>
+         <attribute>
+            <name>type</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>dictCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+         <attribute>
+            <name>typeCode</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>id</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>clazz</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>name</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>style</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        
+        <attribute>
+            <name>defaultValue</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+      </tag>
+		
+	</taglib>

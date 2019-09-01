@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+	<properties resource="database.properties"></properties>
+	<context id="hd_business" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!-- 配置数据库连接 -->
+		<jdbcConnection driverClass="${jdbc.driverClass}"
+			connectionURL="${jdbc.jdbcUrl}" userId="${jdbc.user}"
+			password="${jdbc.password}">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- 指定javaBean生成的位置 -->
+		<javaModelGenerator targetPackage="com.hd_business.bean"
+			targetProject=".\src\main\java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!--指定sql映射文件生成的位置 -->
+		<sqlMapGenerator targetPackage="mapper" targetProject=".\src\main\resources">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<!-- 指定dao接口生成的位置，mapper接口 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.hd_business.dao" targetProject=".\src\main\java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+
+		<!-- table指定每个表的生成策略 -->
+		<table tableName="sys_authority" domainObjectName="SysAuthority"></table>
+		<table tableName="sys_authority_resources" domainObjectName="SysAuthorityResources"></table>
+		<table tableName="sys_resources" domainObjectName="SysResources"></table>
+		<table tableName="sys_role" domainObjectName="SysRole"></table>
+		<table tableName="sys_role_authority" domainObjectName="SysRoleAuthority"></table>
+		<table tableName="sys_user_info" domainObjectName="SysUserInfo"></table>
+		<table tableName="sys_user_role" domainObjectName="SysUserRole"></table>
+	</context>
+</generatorConfiguration>

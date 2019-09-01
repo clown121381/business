@@ -1,0 +1,113 @@
+*{
+	font-size:9pt;
+	border:0;
+	margin:0;
+	padding:0;
+}
+body{
+	background-color:#1c77ac;
+	background-image:url(../images/system-login-backgroud.png);
+	background-repeat:no-repeat;
+	background-position:center top;
+	overflow:hidden;
+	font-family:'微软雅黑';
+	margin:0 auto;
+	min-width:980px;
+}
+.system-login-top{
+	height:47px; 
+	position:absolute; 
+	top:0; 
+	background:url(../images/system-login-top-bg.png) repeat-x;
+	z-index:100; 
+	width:100%;
+}
+.system-login-top span{
+	color:#fff; 
+	line-height:47px; 
+	background:url(../images/system-login-top-label.png) no-repeat 21px 18px; 
+	text-indent:44px; 
+	color:#afc5d2; 
+	float:left;
+}
+
+
+.system-login-bottom{
+	height:50px; 
+	line-height:50px; 
+	text-align:center; 
+	background:url(../images/system-login-bottom-bg.png) repeat-x;
+	position:absolute; 
+	bottom:0; 
+	width:100%; 
+	color:#0b3a58;
+}
+
+.system-login-center{
+	position:absolute;
+	top:50%;
+	height:336px;
+	margin-top:-168px; /* negative half of the height */ 
+	width:100%;
+	
+}
+.system-login{
+	background:url(../images/system-login-center-bg.png) repeat-x;
+	margin-left: auto;
+	margin-right: auto;
+	width:692px;
+	height:336px;
+}
+
+.login-element{
+	padding-top:10px;
+	padding-left:5px;
+}
+.login-error-tip{
+	padding-top:20px;
+	height:60px;
+	color:red;
+	
+}
+.login-user{
+	width:199px; 
+	height:28px;
+	background:url(../images/system-login-user.png) no-repeat; 
+	border:none;   
+	line-height:28px; 
+	padding-left:24px; 
+	font-size:14px; 
+	font-weight:bold;
+}
+.login-password{
+	width:199px; 
+	height:28px; 
+	background:url(../images/system-login-password.png) no-repeat;
+	border:none; 
+	line-height:28px; 
+	padding-left:24px; 
+	font-size:14px; 
+	color:#90a2bc;
+}
+
+.login-authcode{ 
+	width:100px;
+	height:28px; 
+	background:url(../images/system-login-authcode.png) no-repeat;
+	border:none;
+	line-height:28px; 
+	font-size:14px; 
+	color:#90a2bc;
+}
+
+.login-button{
+	width:111px;
+	height:35px; 
+	background:url(../images/system-login-button-bg.png) repeat-x; 
+	margin-left:50px; 
+	font-size:14px; 
+	font-weight:bold; 
+	color:#fff;
+	cursor:pointer; 
+	line-height:35px;
+}
